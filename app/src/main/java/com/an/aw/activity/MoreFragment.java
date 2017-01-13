@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -67,6 +68,10 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.morefragement, container, false);
 
         mRecyclerView = (LRecyclerView) view.findViewById(R.id.list);
+        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
+        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         //init data
         ArrayList<ItemModel> dataList = new ArrayList<>();
         ItemModel item1 = new ItemModel();
@@ -93,6 +98,18 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
         item10.title = "CollapsingToolbarLayoutActivity";
         item11.title = "ExpandableRecyclerViewOneActivity";
         item12.title = "PartialRefreshActivity(局部刷新)";
+        dataList.add(item1);
+        dataList.add(item2);
+        dataList.add(item3);
+        dataList.add(item4);
+        dataList.add(item5);
+        dataList.add(item6);
+        dataList.add(item7);
+        dataList.add(item8);
+        dataList.add(item9);
+        dataList.add(item10);
+        dataList.add(item11);
+        dataList.add(item12);
 
         mCurrentCounter = dataList.size();
 
@@ -143,7 +160,7 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onItemClick(View view, int position) {
                 ItemModel item = mDataAdapter.getDataList().get(position);
-                Toast.makeText(getActivity(), item.title, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, item.title, Toast.LENGTH_SHORT).show();
             }
 
         });
