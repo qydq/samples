@@ -30,7 +30,7 @@ public class NeiYiFragment extends Fragment implements View.OnClickListener {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_my, container, false);
+        View view = inflater.inflate(R.layout.neiyifragment, container, false);
         btn_one = (Button) view.findViewById(R.id.btn_one);
         btn_two = (Button) view.findViewById(R.id.btn_two);
         btn_three = (Button) view.findViewById(R.id.btn_three);

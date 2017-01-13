@@ -1,6 +1,5 @@
 package com.an.aw.activity;
 
-import android.annotation.SuppressLint;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -22,7 +21,7 @@ public class LoveFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.first_fragment, container, false);
+        View view = inflater.inflate(R.layout.lovefragment, container, false);
         mTextView = (TextView) view.findViewById(R.id.txt_content);
         //mTextView = (TextView)getActivity().findViewById(R.id.txt_content);
         mTextView.setText(context);

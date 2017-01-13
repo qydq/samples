@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             topBar.setText(R.string.more);
             tabMore.setSelected(true);
             if (f4 == null) {
-                f4 = new MoreFragment("第四个Fragment");
+                f4 = new MoreFragment("第四个Fragment",MainActivity.this);
                 transaction.add(R.id.fragment_container, f4);
             } else {
                 transaction.show(f4);
