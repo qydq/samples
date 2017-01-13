@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/tab_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/transparent">
+
+        <TextView
+            android:id="@+id/txt_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="首页"
+            android:textColor="@color/text_gray"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/text_gray" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/tab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ly_tab_menu_deal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/tabHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/tab_menu_bg"
+                android:gravity="center"
+                android:paddingBottom="@dimen/bar_bottom"
+                android:paddingTop="@dimen/bar_bottom">
+
+                <TextView
+                    android:id="@+id/txt_deal1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="2dp"
+                    android:drawableTop="@drawable/tab_menu_better1"
+                    android:gravity="center"
+                    android:text="@string/home"
+                    android:textColor="@drawable/tab_menu_text" />
+
+                <TextView
+                    android:id="@+id/tvTips1"
+                    style="@style/tab_menu_bgnum"
+                    android:layout_toRightOf="@+id/txt_deal1"
+                    android:text="99+"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_tab_menu_poi"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/tabNeiyi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/tab_menu_bg"
+                android:gravity="center"
+                android:paddingBottom="@dimen/bar_bottom"
+                android:paddingTop="@dimen/bar_bottom">
+
+                <TextView
+                    android:id="@+id/txt_poi1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="2dp"
+                    android:drawableTop="@drawable/tab_menu_better2"
+                    android:gravity="center"
+                    android:text="@string/neiyi"
+                    android:textColor="@drawable/tab_menu_text" />
+
+                <TextView
+                    android:id="@+id/tvTips2"
+                    style="@style/tab_menu_bgnum"
+                    android:layout_toRightOf="@+id/txt_poi1"
+                    android:text="99+"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_tab_menu_more"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/tabLove"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/tab_menu_bg"
+                android:gravity="center"
+                android:paddingBottom="@dimen/bar_bottom"
+                android:paddingTop="@dimen/bar_bottom">
+
+                <TextView
+                    android:id="@+id/txt_user1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="2dp"
+                    android:drawableTop="@drawable/tab_menu_better3"
+                    android:gravity="center"
+                    android:text="@string/love"
+                    android:textColor="@drawable/tab_menu_text" />
+
+                <TextView
+                    android:id="@+id/tvTips3"
+                    style="@style/tab_menu_bgnum"
+                    android:layout_toRightOf="@+id/txt_user1"
+                    android:text="99+" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_tab_menu_user"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/tabMore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/tab_menu_bg"
+                android:gravity="center"
+                android:paddingBottom="@dimen/bar_bottom"
+                android:paddingTop="@dimen/bar_bottom">
+
+                <TextView
+                    android:id="@+id/txt_more1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="2dp"
+                    android:drawableTop="@drawable/tab_menu_better4"
+                    android:gravity="center"
+                    android:text="@string/more"
+                    android:textColor="@drawable/tab_menu_text" />
+
+                <ImageView
+                    android:id="@+id/ivMore"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginLeft="-5dp"
+                    android:layout_toRightOf="@id/txt_more1"
+                    android:src="@mipmap/hong"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/div_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_above="@id/tab_menu"
+        android:layout_marginTop="@dimen/bar_bottom"
+        android:background="@color/text_gray" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tab_menu"
+        android:layout_below="@id/tab_title"
+        android:background="@color/transparent" />
+</RelativeLayout>
